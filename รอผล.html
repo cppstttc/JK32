@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+  <title>LIFF: LINE Front-end Framework</title>
+</head>
+<body>
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script>
+    async function main() {
+      await liff.init({ liffID: "1656281965-9E25RlmQ</liff" })
+      await liff.shareTargetPicker ([
+        {
+          typeof: "flex",
+          altText: "Flex Message from Shaer Target Picker",
+          contents: {
+  "type": "bubble",
+  "direction": "ltr",
+  "hero": {
+    "type": "image",
+    "url": "https://vos.line-scdn.net/bot-designer-template-images/bot-designer-icon.png",
+    "size": "full",
+    "aspectRatio": "1.51:1",
+    "aspectMode": "fit"
+  },
+  "footer": {
+    "type": "box",
+    "layout": "horizontal",
+    "contents": [
+      {
+        "type": "button",
+        "action": {
+          "type": "uri",
+          "label": "สมัครสมาชิก",
+          "uri": "https://linecorp.com"
+        },
+        "color": "#00C717FF",
+        "style": "primary",
+        "gravity": "center"
+      },
+      {
+        "type": "button",
+        "action": {
+          "type": "uri",
+          "label": "แชร์",
+          "uri": "https://quickstart-liff-uuwdxg.stackblitz.io"
+        },
+        "color": "#00C717FF",
+        "style": "primary",
+        "gravity": "center"
+      }
+    ]
+  }
+}
+        }
+      ])
+     liff.closewindow()
+     }
+     main()
+  </script>
+</body>
+</html>
